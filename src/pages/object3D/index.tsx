@@ -91,7 +91,7 @@ const Object3D = () => {
 
         camera.lookAt(scene.position);
 
-        root.traverse(function (object) {
+        root.traverse(function (object: any) {
           object.rotation.x = rx;
           object.rotation.y = ry;
           object.rotation.z = rz;
