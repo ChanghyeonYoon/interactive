@@ -1,5 +1,4 @@
 import React from "react";
-import * as THREE from "three";
 import Header from "@/components/header";
 
 const BoxPage = () => {
