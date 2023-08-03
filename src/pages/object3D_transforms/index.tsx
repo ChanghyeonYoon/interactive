@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "@/components/header";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 const DESCRIPTIONS = [
   "mesh.position.x = 0",
@@ -121,8 +122,10 @@ const Object3D_Transforms = () => {
   return (
     <div className='py-10 bg-black h-screen' id='object3D_transforms'>
       <Header title={"Object 3D Transforms"} />
-      <div className='py-5 text-3xl fixed bottom-40 z-10 w-full flex gap-5 justify-center'>
-        <SyntaxHighlighter language='javascript'>{DESCRIPTIONS[step - 1]}</SyntaxHighlighter>
+      <div className='bg-[#1C1C1E] text-3xl fixed bottom-40 z-10 w-screen flex gap-5 justify-center'>
+        <SyntaxHighlighter style={atomDark} language='javascript'>
+          {DESCRIPTIONS[step - 1]}
+        </SyntaxHighlighter>
       </div>
       <div className='fixed bottom-20 z-10 w-full flex gap-5 justify-center'>
         <button onClick={back} className='bg-white rounded-md px-4 py-2'>
