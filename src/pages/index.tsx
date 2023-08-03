@@ -10,6 +10,10 @@ const LIST = [
     name: "Three.js Object3D",
     path: "/object3D",
   },
+  {
+    name: "Three.js Object3D Transforms",
+    path: "/object3D_transforms",
+  },
 ];
 
 export default function Home() {

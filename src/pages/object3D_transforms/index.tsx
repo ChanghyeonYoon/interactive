@@ -2,7 +2,7 @@ import React from "react";
 import * as THREE from "three";
 import Header from "@/components/header";
 
-const Object3D = () => {
+const Object3D_Transforms = () => {
   React.useEffect(() => {
     if (typeof window !== "undefined") {
       const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 15000);
@@ -113,9 +113,9 @@ const Object3D = () => {
 
   return (
     <div className='py-10 bg-black h-screen' id='object3D'>
-      <Header title={"Object 3D"} />
+      <Header title={"Object 3D Transforms"} />
     </div>
   );
 };
 
-export default Object3D;
+export default Object3D_Transforms;
