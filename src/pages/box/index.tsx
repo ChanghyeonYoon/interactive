@@ -11,7 +11,6 @@ const BoxPage = () => {
       const renderer = new THREE.WebGLRenderer();
       renderer.setSize(window.innerWidth, window.innerHeight);
       const div = document.getElementById("box");
-      console.log("append");
       div?.appendChild(renderer.domElement);
 
       const geometry = new THREE.BoxGeometry(1, 1, 1);
@@ -26,6 +25,7 @@ const BoxPage = () => {
         cube.rotation.y += 0.01;
         renderer.render(scene, camera);
       };
+
       render();
     }
   }, []);
