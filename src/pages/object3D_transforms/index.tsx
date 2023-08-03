@@ -80,7 +80,6 @@ const Object3D_Transforms = () => {
 
   const applyStep = () => {
     if (!_mesh) return;
-    console.log(step);
     if (step == 1) {
       setupTween(_mesh.position, "x", 0);
     } else if (step == 2) {

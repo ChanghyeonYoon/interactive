@@ -1,6 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
-import Arrow from "/public/icons/arrow.svg";
 import React from "react";
 import { FpsView } from "react-fps";
 
