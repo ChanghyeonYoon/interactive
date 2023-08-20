@@ -14,6 +14,14 @@ const LIST = [
     name: "Three.js Object3D Transforms",
     path: "/object3D_transforms",
   },
+  {
+    name: "Three.js Lights",
+    path: "/lights",
+  },
+  {
+    name: "Three.js Interaction",
+    path: "/interaction",
+  },
 ];
 
 export default function Home() {

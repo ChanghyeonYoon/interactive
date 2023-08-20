@@ -108,8 +108,8 @@ const Object3D_Transforms = () => {
   };
 
   const back = () => {
-    if (step <= 1) {
-      setStep(1);
+    if (step <= 0) {
+      setStep(0);
       return;
     }
     setStep((p) => p - 1);
