@@ -2,7 +2,7 @@ import React from "react";
 import gsap from "gsap";
 
 import Header from "../../components/header";
-import { Stage, Loader, Photo } from "./demo";
+import { Stage, Loader, Photo } from "../../scripts/demo";
 
 export default function Demo() {
   React.useEffect(() => {
