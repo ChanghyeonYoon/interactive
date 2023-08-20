@@ -118,6 +118,7 @@ const Object3D_Transforms = () => {
   React.useEffect(() => {
     applyStep();
   }, [step]);
+
   return (
     <div className='py-10 bg-black h-screen' id='object3D_transforms'>
       <Header title={"Object 3D Transforms"} />

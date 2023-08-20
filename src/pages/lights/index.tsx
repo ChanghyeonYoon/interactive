@@ -27,7 +27,7 @@ const DESCRIPTIONS = [
   "light = new THREE.AmbientLight( 0x444444 );",
 ];
 
-const Object3D_Transforms = () => {
+const Lights = () => {
   const [step, setStep] = React.useState(1);
   const material = React.useRef<any>();
   const white = React.useRef<any>();
@@ -289,4 +289,4 @@ const Object3D_Transforms = () => {
   );
 };
 
-export default Object3D_Transforms;
+export default Lights;

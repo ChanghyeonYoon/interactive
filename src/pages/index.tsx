@@ -19,8 +19,12 @@ const LIST = [
     path: "/lights",
   },
   {
-    name: "Three.js Interaction",
-    path: "/interaction",
+    name: "Three.js Interaction GUI",
+    path: "/interaction/gui",
+  },
+  {
+    name: "Three.js Interaction Cubes",
+    path: "/interaction/cubes",
   },
 ];
 
