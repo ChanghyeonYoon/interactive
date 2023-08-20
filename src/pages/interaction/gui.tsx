@@ -116,20 +116,9 @@ const Interaction_GUI = () => {
     const raycaster = new THREE.Raycaster();
 
     const render = () => {
-      // theta += 0.1;
-
-      // camera.position.x = radius * Math.sin( THREE.Math.degToRad( theta ) );
-      // camera.position.y = radius * Math.sin( THREE.Math.degToRad( theta ) );
-      // camera.position.z = radius * Math.cos( THREE.Math.degToRad( theta ) );
-      // camera.lookAt( scene.position );
-
       // find intersections
       const vector = new THREE.Vector3(mouse.current?.x || 0, mouse.current?.y || 0, 1);
       projector.unprojectVector(vector, camera.current);
-
-      // raycaster.set( camera.position, vector.sub( camera.position ).normalize() );
-
-      // ----
 
       const matrix = new THREE.Matrix4();
       matrix.extractRotation(mesh.matrix);
@@ -138,8 +127,6 @@ const Interaction_GUI = () => {
       direction = direction.applyMatrix4(matrix);
 
       raycaster.set(mesh.position, direction);
-
-      // ----
 
       const intersects = raycaster.intersectObjects(scene.children);
 

@@ -83,27 +83,21 @@ const Interaction_Cubes = () => {
       camera.current.lookAt(scene.position);
 
       // find intersections
-
       const vector = new THREE.Vector3(mouse.current.x, mouse.current.y, 1).unproject(camera.current);
-
       raycaster.set(camera.current.position, vector.sub(camera.current.position).normalize());
-
       const intersects = raycaster.intersectObjects(scene.children);
 
       if (intersects.length > 0) {
         if (INTERSECTED.current != intersects[0].object) {
           if (INTERSECTED.current) INTERSECTED.current.material.emissive.setHex(INTERSECTED.current.currentHex);
-
           INTERSECTED.current = intersects[0].object;
           INTERSECTED.current.currentHex = INTERSECTED.current.material.emissive.getHex();
           INTERSECTED.current.material.emissive.setHex(0xff0000);
         }
       } else {
         if (INTERSECTED.current) INTERSECTED.current.material.emissive.setHex(INTERSECTED.current.currentHex);
-
         INTERSECTED.current = null;
       }
-
       renderer.current.render(scene, camera.current);
     }
 

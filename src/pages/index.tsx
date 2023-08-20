@@ -26,6 +26,10 @@ const LIST = [
     name: "Three.js Interaction Cubes",
     path: "/interaction/cubes",
   },
+  {
+    name: "Demo - Three.js & GSAP",
+    path: "/demo",
+  },
 ];
 
 export default function Home() {
@@ -36,6 +40,17 @@ export default function Home() {
           <Link href={item.path}>{item.name}</Link>
         </Button>
       ))}
+
+      <div className='mt-20 w-full justify-center items-center flex gap-10'>
+        <span className='text-3xl'>Github</span>
+        <a
+          className='underline text-blue-500 hover:text-blue-800 text-xl'
+          href={"https://github.com/ChanghyeonYoon/interactive"}
+          target='_blank'
+        >
+          https://github.com/ChanghyeonYoon/interactive
+        </a>
+      </div>
     </main>
   );
 }
