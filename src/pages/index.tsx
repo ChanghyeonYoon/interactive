@@ -34,17 +34,19 @@ const LIST = [
 
 export default function Home() {
   return (
-    <main className='flex min-h-screen flex-col items-center gap-4 p-24'>
-      {LIST.map((item) => (
-        <Button key={item.path}>
-          <Link href={item.path}>{item.name}</Link>
-        </Button>
-      ))}
+    <main className='flex w-screen min-h-screen flex-col items-center gap-5 p-24 max-lg:p-5'>
+      <div className='w-full gap-5 flex flex-col items-center'>
+        {LIST.map((item) => (
+          <Button key={item.path}>
+            <Link href={item.path}>{item.name}</Link>
+          </Button>
+        ))}
+      </div>
 
-      <div className='mt-20 w-full justify-center items-center flex gap-10'>
+      <div className='mt-20 w-full justify-center items-center flex gap-10 max-lg:flex-col max-lg:gap-5'>
         <span className='text-3xl'>Github</span>
         <a
-          className='underline text-blue-500 hover:text-blue-800 text-xl'
+          className='underline text-blue-500 hover:text-blue-800 text-xl max-lg:text-sm'
           href={"https://github.com/ChanghyeonYoon/interactive"}
           target='_blank'
         >

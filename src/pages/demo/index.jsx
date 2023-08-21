@@ -181,13 +181,20 @@ export default function Demo() {
 
       const init = () => {
         addNewPhoto();
-
         window.addEventListener("mousedown", (event) => down(event.clientX, event.clientY));
         window.addEventListener("touchstart", (event) => down(event.touches[0].clientX, event.touches[0].clientY));
         window.addEventListener("mousemove", (event) => move(event.clientX, event.clientY));
         window.addEventListener("touchmove", (event) => move(event.touches[0].clientX, event.touches[0].clientY));
         window.addEventListener("mouseup", up);
         window.addEventListener("touchend", up);
+        return () => {
+          window.removeEventListener("mousedown", (event) => down(event.clientX, event.clientY));
+          window.removeEventListener("touchstart", (event) => down(event.touches[0].clientX, event.touches[0].clientY));
+          window.removeEventListener("mousemove", (event) => move(event.clientX, event.clientY));
+          window.removeEventListener("touchmove", (event) => move(event.touches[0].clientX, event.touches[0].clientY));
+          window.removeEventListener("mouseup", up);
+          window.removeEventListener("touchend", up);
+        };
       };
 
       // Tick

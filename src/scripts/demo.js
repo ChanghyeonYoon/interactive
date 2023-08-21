@@ -44,32 +44,21 @@ export class Stage {
       height: 0,
     };
 
-    /**
-     * Background Gradient
-     */
-
+    // Background Gradient
     this.background = BackgroundGradient(bottomColor, topColor);
     this.scene.add(this.background);
 
-    /**
-     * Camera
-     */
-
+    // Camera
     this.camera = new THREE.PerspectiveCamera(30, this.sizes.width / this.sizes.height, 0.1, 100);
     this.camera.position.set(0, 0, 6);
     this.scene.add(this.camera);
 
-    /**
-     * Camera Group
-     */
-
+    // Camera Group
     this.cameraGroup = new THREE.Group();
 
     this.scene.add(this.cameraGroup);
 
-    /**
-     * Renderer
-     */
+    // Renderer
     const renderer = new THREE.WebGLRenderer({
       canvas: this.canvas,
       antialias: window.devicePixelRatio === 1 ? true : false,
